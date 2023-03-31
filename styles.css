@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(120deg, #f6d365, #fda085);
+    min-height: 100vh;
+    color: #303030;
+    font-family: "poppins", sans-serif;
+}
+
+header{
+    font-size: 1.5rem;
+}
+
+header, form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 20vh;
+}
+
+form input, form button{
+    padding: .5rem;
+    font-size: 2rem;
+    background: white;
+    border: none;
+    color: #303030;
+}
+
+form button{
+    color: #d88771;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover{
+    background: #d88771;
+    color: white;
+}
+
+.todo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list{
+    list-style: none;
+    min-width: 30%;
+}
+
+.todo {
+    margin: 0.5rem;
+    background: white;
+    color: #303030;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all .5s ease;
+}
+
+.todo li{
+    /* pushes the buttons next to each other */
+    flex: 1;
+}
+
+.trash-btn, .complete-btn{
+    background: #212025;
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.complete-btn{
+    background: rgb(63, 129, 63);
+}
+
+.todo-item{
+    padding: 0rem .5rem;
+}
+
+.fa-trash, .fa-check {
+    pointer-events: none;
+    /* cant click on this anymore, you will be able to click the whole div */
+}
+
+.completed{
+    text-decoration: line-through;
+    opacity: 0.5;;
+
+}
+
+.fall{
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
+
+.select{
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+select{
+    color: #212025;
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.select::after{
+    content: '\25BC';
+    position: absolute;
+    background-color: #ff6f47;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+}
+
+.select:hover::after{
+    background: white;
+    color: #212025;
+    transition: all 0.3s ease;
+}
